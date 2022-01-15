@@ -2,19 +2,28 @@
 using namespace std;
 int main()
 {
-	int a,i;
+	int a,b,i,j,k;
+	cout<<"Enter any number:";
 	cin>>a;
-	for (i=2; i<a;i++)
+	b=2;
+	while (b<=a)
 	{
-		if(a%i==0)
-		{
-			cout <<"not a prime number:";
+		i=1;
+		j=2;
+		while(j<b)
+		{ 
+				if(b%j==0)
+			{
+			i=0;
 			break;
+			}
+			j++;
+	   }
+		if (i==1)
+		{
+			cout<< b <<endl;
 		}
-	}
-	if(a==i)
-	{
-		cout<<"Yes, it is a prime number:";
-	}
 	
+		b++;
+	}
 }
